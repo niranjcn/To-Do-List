@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: mediumslateblue;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Main Title Styles */
+.maintitle {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Button Styles */
+.input-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.save-btn{
+  color: white;
+  background-color:rgb(255, 200, 0);
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+input{
+  width: 300px;
+  height: 40px;
+  font-size: 1.2rem; /* Adjusted font size for better alignment */
+  border-radius: 20px;
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid #ddd; /* Added border for better visibility */
+  color: black;
+}
+
+.input-btn input {
+  width: 300px;
+  height: 40px;
+  font-size: 1.2rem; /* Adjusted font size for better alignment */
+  border-radius: 20px;
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid #ddd; /* Added border for better visibility */
+  color: black;
+}
+
+.input-btn button {
+  height: 40px; /* Match height of the input field */
+  width: 40px; /* Match width of the input field */
+  background: rgb(255, 200, 0);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* Font Awesome Styles */
+.fa-plus-circle {
+  margin-top: 0.3rem;
+  margin-left: -8px;
+}
+
+/* Todo Container Styles */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Todo List Styles */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+/* Todo Item Styles */
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+  max-width: 500px; /* Added max-width for better alignment */
+  margin-bottom: 10px; /* Space between todo items */
+  background-color: #f9f9f9; /* Slightly different background for todos */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.todo-item {
+  color: black;
+  flex: 1;
+  
+  padding: 0 10px;
+}
+
+/* Button Styles */
+.trash-btn, .complete-btn,.edit-btn {
+  color: white;
+  
+  border: none;
+  background: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.complete-btn {
+  background: rgb(255, 200, 0);
+  border-radius: 5px; /* Rounded corners for complete button */
+}
+
+.trash-btn {
+  background: rgb(171, 171, 171);
+  border-radius: 5px; /* Rounded corners for trash button */
+}
+
+.complete-btn:hover {
+  background: rgb(255, 180, 0); /* Slightly darker on hover */
+}
+
+.trash-btn:hover {
+  background: rgb(150, 150, 150); /* Slightly darker on hover */
+}
+
+.edit-btn{
+  background: rgb(255, 200, 0);
+  border-radius: 5px; 
+}
+
+.edit-btn:hover{
+  background: rgb(255, 180, 0);
+}
+
+/* Completed Todo Styles */
+.completed {
+  color: black;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Slide Animation Styles */
+.slide {
+  transform: translateX(10rem);
+  opacity: 0;
+}
+
+/* Select Styles */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+select {
+  color: rgb(255, 200, 0);
+  width: 10rem;
+  height: 3.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: rgb(255, 200, 0);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: white;
+  color: rgb(255, 200, 0);
+}
